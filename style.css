@@ -1,0 +1,111 @@
+body { font-family: Arial; }
+
+/* ---- top image ---- */
+
+.crop-container {
+    height: 110vh;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+}
+.crop-container img {
+    margin-top: -750px;
+    margin-bottom: -200px;
+}
+
+/* ---- header ---- */
+
+.header {
+  overflow: hidden;
+  padding: 1px 5px;
+}
+
+.header a {
+  float: left;
+  color: #030303;
+  text-align: center;
+  padding: 1px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: #444444;
+}
+
+.header-right {
+  float: right;
+  text-align: center;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  background: #F2F0EF;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: calc(25% - 9px);
+  float: left;
+  margin-bottom: 8px;
+  min-width: 150px;
+  height:auto;
+}
+
+.grid-item--width2 { width: calc(50% - 6px); }
+.grid-item--width3 { width: calc(75% - 3px); }
+
+.grid-item--height2 { height: 600px; }
+.grid-item--height3 { height: 900px; }
+.grid-item--height4 { height: 1200px; }
+
+/* ---- button ---- */
+
+.backToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  border: none;
+  color: #cccccc;
+  border-radius: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.backToTopBtn:not(:hover) {
+  background: #030303;
+}
+.backToTopBtn:hover {
+  background: #222222;
+}
+.backToTopBtn.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.backToTopBtn:not(.active) {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
